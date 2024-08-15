@@ -1,22 +1,22 @@
-import type { Metadata } from "next"
-import { Inter as FontSans } from "next/font/google"
-import "./globals.css"
-import { cn } from "@/lib/utils"
-import Navbar from "./compontents/Navbar"
+import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google";
+import "./globals.css";
+import { cn } from "@/lib/utils";
+import Navbar from "./_compontents/Navbar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 export const metadata: Metadata = {
   title: "Ezytra",
   description: "Web design agency",
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -30,5 +30,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
