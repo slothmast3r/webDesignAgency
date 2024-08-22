@@ -20,9 +20,9 @@ import { MenuIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigationLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
+  { href: "/", label: "Strona główna" },
+  { href: "/services", label: "Usługi" },
+  { href: "/about", label: "O nas" },
 ];
 
 function Navbar() {
@@ -30,7 +30,7 @@ function Navbar() {
 
   return (
     <header className="p-5 m-auto max-w-[72rem] flex justify-between">
-      <div>LOGO</div>
+      <div>Ezytra</div>
       <NavigationMenu className="">
         {isDesktop ? (
           <NavigationMenuList>
@@ -50,7 +50,7 @@ function Navbar() {
               <MenuIcon />
             </DrawerTrigger>
             <DrawerContent className="flex flex-col">
-              <div>LOGO</div>
+              <div>Ezytra</div>
               <NavigationMenuList className="flex flex-col justify-start items-start h-fit">
                 {navigationLinks.map((link) => (
                   <NavigationMenuItem key={link.href}>
@@ -66,7 +66,7 @@ function Navbar() {
               </NavigationMenuList>
               <Button className="w-fit">
                 <Link href="/contact" passHref>
-                  Contact us
+                  Darmowa konstultacja
                 </Link>
               </Button>
             </DrawerContent>
@@ -76,7 +76,7 @@ function Navbar() {
       {isDesktop && (
         <Button>
           <Link href="/contact" passHref>
-            Contact us
+            Darmowa konstultacja
           </Link>
         </Button>
       )}
